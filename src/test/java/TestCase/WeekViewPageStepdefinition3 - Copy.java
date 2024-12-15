@@ -12,7 +12,7 @@ import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 
-public class WeekViewPageStepdefinition2 extends BrowserSetup {
+public class WeekViewPageStepdefinition3 extends BrowserSetup {
 
     static Properties prop;
     static FileInputStream file;
@@ -41,7 +41,6 @@ public class WeekViewPageStepdefinition2 extends BrowserSetup {
     @Given("^User is on login page weekview$")
     public void user_is_on_login_page() throws Throwable {
     	weekviewpage = new WeekviewPage(driver);  // Pass WebDriver instance to Page Object
-    	weekviewpage = new WeekviewPage(driver);  // Pass WebDriver instance to Page Object
         // Optionally, navigate to a specific page here, but we are already on the login page
         driver.get("https://next.malinko-uat.co.uk");
         Thread.sleep(3000);
@@ -66,8 +65,6 @@ public class WeekViewPageStepdefinition2 extends BrowserSetup {
     public void the_user_goes_to_the_dayview_page() throws Throwable {
         driver.get("https://next.malinko-uat.co.uk/week");
         Thread.sleep(3000);
-        
-        // driver.get("https://next.malinko-uat.co.uk/week");
     }
 
     @Then("^the user clicks the load button weekview$")
